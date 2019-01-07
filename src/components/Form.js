@@ -47,6 +47,18 @@ class Form extends React.Component {
               />
             </div>
             <div>
+              <label htmlFor="bankHolidays">
+                Number of bank holidays per year
+              </label>{' '}
+              <input
+                id="bankHolidays"
+                placeholder="Number of bank holidays"
+                type="text"
+                defaultValue={this.props.bankHolidays}
+                onChange={this.handleChange}
+              />
+            </div>
+            <div>
               <label htmlFor="itemCost">Cost of the Item</label>{' '}
               <input
                 id="itemCost"
