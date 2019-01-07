@@ -3,6 +3,7 @@ import Form from './components/Form'
 import Result from './components/Result'
 import getStateFromStorage from './helpers/getStateFromStorage'
 import saveStateToStorage from './helpers/saveStateToStorage'
+import calculateCost from './helpers/calculateCost'
 
 class App extends React.Component {
   state = {}
@@ -23,24 +24,13 @@ class App extends React.Component {
     const monthlyIncome = this.state.monthlyIncome
     const itemCost = this.state.itemCost
 
-    // calculate
-    const actualMonthlyWorkedDays = (5 * 52 - bankHolidays - holidays) / 10
-    const hoursInAMonth = (weeklyHours / 5) * actualMonthlyWorkedDays
-    const minutesInAMonth = hoursInAMonth * 60
-    const realPayPerMinute = monthlyIncome / minutesInAMonth
-    const roundedPayPerMinute = realPayPerMinute.toFixed(3)
-    const costinMinutes = Math.floor(itemCost / roundedPayPerMinute)
-
-    const totalHours = Math.floor(costinMinutes / 60)
-    const totalMinutes = costinMinutes % 60
-
-    let result
-
-    if (costinMinutes) {
-      result = `${totalHours} hour(s) and ${totalMinutes} minutes`
-    } else {
-      result = 'Please enter valid values'
-    }
+    const result = calculateCost(
+      weeklyHours,
+      holidays,
+      bankHolidays,
+      monthlyIncome,
+      itemCost
+    )
 
     // show
     this.setState({
