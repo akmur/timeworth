@@ -1,6 +1,6 @@
-# git-blog
+# timeworth
 
-run 
+run
 
 ```
 npm install
