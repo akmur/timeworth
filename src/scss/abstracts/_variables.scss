@@ -1,7 +1,6 @@
 // Fonts
-
-$font-title: 'Merriweather', Serif;
-$font-body: 'Muli', Sans-Serif;
+$font-sans: 'Raleway', sans-serif;
+$font-serif: 'Raleway', sans-serif;
 
 // Sizes
 $mini: 382px;
@@ -11,35 +10,23 @@ $large: 1024px;
 
 // Colors
 
-$white: #e7e7e7;
-$hint-of-red: #f9f9f9;
-$iron: #d6d6d6;
-$armadillo: #4a4a4a;
-$smalt-blue: #568594;
-$black: #212121;
+$white: #ffffff;
+$black: #000000;
+$mine-shaft: #303030;
+$tundora: #565454;
+$stack: #868686;
+$chrome-yellow: #FFAB00;
 
-// palette
-$paradiso: #4a7e85;
-$sapphire: #284f9c;
-$crown-of-thorns: #792218;
-$equator: #e3c45c;
-$roman: #ff5349;
-$brick-red: #cb4855;
-$light-red: #ff584e;
 
 $colors: (
-  whites: (
-    light: $white,
-    base: $hint-of-red,
-    dark: $iron
+  greyscale: (
+    lightest: $white,
+    light: $stack,
+    base: $tundora,
+    dark: $mine-shaft,
+    darkest: $black
   ),
-  accent: (
-    light: $light-red,
-    base: $roman,
-    dark: $brick-red
+  ui: (
+    button: $chrome-yellow
   ),
-  blacks: (
-    base: $armadillo,
-    dark: $black
-  )
 );

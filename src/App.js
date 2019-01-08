@@ -1,6 +1,7 @@
 import React from 'react'
 import Form from './components/Form'
 import Result from './components/Result'
+import Header from './components/Header'
 import getStateFromStorage from './helpers/getStateFromStorage'
 import saveStateToStorage from './helpers/saveStateToStorage'
 import calculateCost from './helpers/calculateCost'
@@ -39,22 +40,28 @@ class App extends React.Component {
   }
 
   componentDidMount() {
-    this.setState(getStateFromStorage())
+    this.setState({ ...getStateFromStorage(), showResult: false })
   }
 
   render() {
     return (
-      <div>
-        <Form
-          monthlyIncome={this.state.monthlyIncome}
-          holidays={this.state.holidays}
-          bankHolidays={this.state.bankHolidays}
-          weeklyHours={this.state.weeklyHours}
-          handleChange={this.handleChange}
-          handleSubmit={this.handleSubmit}
-        />
-        <Result result={this.state.result} />
-      </div>
+      <section className="wrapper">
+        <Header />
+        <main className="main">
+          {!this.state.showResult ? (
+            <Form
+              monthlyIncome={this.state.monthlyIncome}
+              holidays={this.state.holidays}
+              bankHolidays={this.state.bankHolidays}
+              weeklyHours={this.state.weeklyHours}
+              handleChange={this.handleChange}
+              handleSubmit={this.handleSubmit}
+            />
+          ) : (
+            <Result result={this.state.result} />
+          )}
+        </main>
+      </section>
     )
   }
 }
