@@ -17,6 +17,7 @@ function retrieveData(key) {
     default:
       break
   }
+
   return localStorage.getItem(key) ? localStorage.getItem(key) : defaultValue
 }
 
