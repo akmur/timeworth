@@ -114,23 +114,3 @@ textarea {
     color: get-color(greyscale, dark);
     outline: 0; }
 
-textarea, select, input[type] {
-  color: #c9c9c9;
-  padding: 6px 10px;
-  /* The 6px vertically centers text on FF, ignored by Webkit */
-  margin-bottom: 10px;
-  background-color: #4a4a4a;
-  border: 1px solid #4a4a4a;
-  box-shadow: none;
-  box-sizing: border-box; }
-  textarea:focus, select:focus, input[type]:focus {
-    border: 1px solid get-color(greyscale, lightest);
-    outline: 0; }
-
-input[type="checkbox"]:focus {
-  outline: 1px dotted get-color(greyscale, lightest); }
-
-label, legend, fieldset {
-  display: block;
-  margin-bottom: .5rem;
-  font-weight: 600; }

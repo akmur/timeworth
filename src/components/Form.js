@@ -15,12 +15,13 @@ class Form extends React.Component {
     return (
       <div>
         <form onSubmit={this.handleSubmit}>
-          <div className="inputField">
+          <div className="inputField has-tooltip">
             <label className="inputField__label" htmlFor="monthlyIncome">
               Monthly income
             </label>
             <div className="inputField__inputWrapper">
               <input
+                className="inputField__input"
                 id="monthlyIncome"
                 placeholder="$$$$"
                 type="text"
@@ -32,10 +33,11 @@ class Form extends React.Component {
               <Tooltip text="Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perferendis, velit!"/>
             </div>
           </div>
-          <div className="inputField">
+          <div className="inputField has-tooltip">
             <label className="inputField__label" htmlFor="weeklyHours">Weekly hours</label>
             <div className="inputField__inputWrapper">
               <input
+                className="inputField__input"
                 id="weeklyHours"
                 placeholder="40"
                 type="text"
@@ -47,10 +49,11 @@ class Form extends React.Component {
               <Tooltip text="Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perferendis, velit!"/>
             </div>
           </div>
-          <div className="inputField">
+          <div className="inputField has-tooltip">
             <label className="inputField__label" htmlFor="holidays">Holidays per year</label>
             <div className="inputField__inputWrapper">
               <input
+                className="inputField__input"
                 id="holidays"
                 placeholder="20"
                 type="text"
@@ -61,10 +64,11 @@ class Form extends React.Component {
               <Tooltip text="Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perferendis, velit!"/>
             </div>
           </div>
-          <div className="inputField">
+          <div className="inputField has-tooltip">
             <label className="inputField__label" htmlFor="bankHolidays">Bank holidays per year</label>
             <div className="inputField__inputWrapper">
               <input
+                className="inputField__input"
                 id="bankHolidays"
                 placeholder="10"
                 type="text"
@@ -75,10 +79,11 @@ class Form extends React.Component {
               <Tooltip text="Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perferendis, velit!"/>
             </div>
           </div>
-          <div className="inputField">
+          <div className="inputField has-tooltip">
             <label className="inputField__label" htmlFor="itemCost">Cost of the stuff</label>
             <div className="inputField__inputWrapper">
               <input
+                className="inputField__input"
                 id="itemCost"
                 placeholder="$$$.$$"
                 type="text"
@@ -89,7 +94,7 @@ class Form extends React.Component {
             </div>
           </div>
           <div className="submitField">
-            <input id="submit" type="submit" defaultValue="Tell me now" />
+            <button class="button" id="submit" type="submit">Tell me now!</button>
           </div>
         </form>
       </div>

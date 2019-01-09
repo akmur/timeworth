@@ -1,0 +1,24 @@
+.tooltip__text {
+  display: none;
+}
+
+.tooltip__icon {
+  display: flex;
+  position: relative;
+  top: 1px;
+  cursor: pointer;
+}
+
+// .tooltip__icon {
+//   background: get-color(greyscale, light);
+//   border-radius: 50%;
+//   color: get-color(greyscale, dark);
+//   cursor: pointer;
+//   display: flex;
+//   font-family: $font-serif;
+//   font-style: italic;
+//   height: 1em;
+//   justify-content: center;
+//   line-height: 1;
+//   width: 1em;
+// }
