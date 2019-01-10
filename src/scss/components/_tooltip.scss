@@ -7,6 +7,36 @@
   position: relative;
   top: 1px;
   cursor: pointer;
+
+  &:hover + .tooltip__text {
+    display: block;
+  }
+}
+
+.tooltip__text {
+  width: 200px;
+  position: absolute;
+  left: 50px;
+  top: 0;
+  background: get-color(greyscale, base);
+  border: 1px solid get-color(greyscale, lightest);
+  color: get-color(greyscale, lightest);
+  padding: 0.5em;
+  transform: translateY(-40%);
+  z-index: 10;
+
+  &::before {
+    content: '';
+    position: absolute;
+    left: -0.55em;
+    top: 50%;
+    margin-top: -0.75rem;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 1rem 1rem 1rem 0;
+    border-color: transparent get-color(greyscale, lightest) transparent transparent;
+  }
 }
 
 // .tooltip__icon {

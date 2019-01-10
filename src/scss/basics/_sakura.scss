@@ -10,18 +10,15 @@ html {
   font-family: $font-sans; }
 
 body {
+  align-items: center;
+  background-color: get-color(greyscale, dark);
+  color: get-color(greyscale, lightest);
+  display: flex;
   font-size: 1.8rem;
   line-height: 1.618;
-  max-width: 38em;
   margin: auto;
-  color: #c9c9c9;
-  background-color: get-color(greyscale, dark);
-  padding: 13px; }
-
-nav {
-  background: get-color(greyscale, lightest); }
-  nav a {
-    font-family: $font-sans; }
+  min-height: 100vh;
+}
 
 @media (max-width: 684px) {
   body {
@@ -84,15 +81,6 @@ li {
 img {
   max-width: 100%; }
 
-/* Buttons, forms and input */
-input, textarea {
-  border: 1px solid #c9c9c9; }
-  input:focus, textarea:focus {
-    border: 1px solid get-color(greyscale, lightest); }
-
-textarea {
-  width: 100%; }
-
 .button, button, input[type="submit"], input[type="reset"], input[type="button"] {
   display: inline-block;
   padding: 5px 10px;
@@ -104,13 +92,12 @@ textarea {
   border-radius: 1px;
   border: 1px solid get-color(greyscale, lightest);
   cursor: pointer;
-  box-sizing: border-box; }
-  .button[disabled], button[disabled], input[type="submit"][disabled], input[type="reset"][disabled], input[type="button"][disabled] {
-    cursor: default;
-    opacity: .5; }
-  .button:focus, .button:hover, button:focus, button:hover, input[type="submit"]:focus, input[type="submit"]:hover, input[type="reset"]:focus, input[type="reset"]:hover, input[type="button"]:focus, input[type="button"]:hover {
-    background-color: #c9c9c9;
-    border-color: #c9c9c9;
-    color: get-color(greyscale, dark);
-    outline: 0; }
+  box-sizing: border-box;
+}
+
+.button[disabled], button[disabled], input[type="submit"][disabled], input[type="reset"][disabled], input[type="button"][disabled] {
+  cursor: default;
+  opacity: .5;
+}
+
 

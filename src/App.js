@@ -18,24 +18,19 @@ class App extends React.Component {
   }
 
   handleSubmit = event => {
-    // get data from all state fields
-    const weeklyHours = this.state.weeklyHours
-    const holidays = this.state.holidays
-    const bankHolidays = this.state.bankHolidays
-    const monthlyIncome = this.state.monthlyIncome
-    const itemCost = this.state.itemCost
-
     const result = calculateCost(
-      weeklyHours,
-      holidays,
-      bankHolidays,
-      monthlyIncome,
-      itemCost
+      this.state.weeklyHours,
+      this.state.holidays,
+      this.state.bankHolidays,
+      this.state.monthlyIncome,
+      this.state.itemCost
     )
 
     // show
     this.setState({
-      result: result
+      totalHours: result.totalHours,
+      totalMinutes: result.totalMinutes,
+      showResult: result.showResult
     })
   }
 
@@ -47,20 +42,15 @@ class App extends React.Component {
     return (
       <section className="wrapper">
         <Header />
-        <main className="main">
-          {!this.state.showResult ? (
-            <Form
-              monthlyIncome={this.state.monthlyIncome}
-              holidays={this.state.holidays}
-              bankHolidays={this.state.bankHolidays}
-              weeklyHours={this.state.weeklyHours}
-              handleChange={this.handleChange}
-              handleSubmit={this.handleSubmit}
-            />
-          ) : (
-            <Result result={this.state.result} />
-          )}
-        </main>
+        <Form
+          monthlyIncome={this.state.monthlyIncome}
+          holidays={this.state.holidays}
+          bankHolidays={this.state.bankHolidays}
+          weeklyHours={this.state.weeklyHours}
+          handleChange={this.handleChange}
+          handleSubmit={this.handleSubmit}
+        />
+        <Result showResult={this.state.showResult} totalHours={this.state.totalHours} totalMinutes={this.state.totalMinutes} />
       </section>
     )
   }

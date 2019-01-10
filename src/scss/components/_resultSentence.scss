@@ -1,0 +1,22 @@
+.resultSentence {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 4em;
+}
+
+.resultSentence__content {
+  font-size: 2.5em;
+}
+
+.resultSentence__hours {
+  font-size: 2em;
+  font-weight: 700;
+  line-height: 1.25;
+}
+
+.resultSentence__small {
+  font-size: 0.5em;
+  margin-top: 1.5em;
+}

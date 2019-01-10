@@ -13,7 +13,7 @@ class Form extends React.Component {
 
   render() {
     return (
-      <div>
+      <main className="main">
         <form onSubmit={this.handleSubmit}>
           <div className="inputField has-tooltip">
             <label className="inputField__label" htmlFor="monthlyIncome">
@@ -30,11 +30,11 @@ class Form extends React.Component {
                 required
                 className="inputField__input"
               />
-              <Tooltip text="Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perferendis, velit!"/>
+              <Tooltip text="How much do you get per month? 🤑"/>
             </div>
           </div>
           <div className="inputField has-tooltip">
-            <label className="inputField__label" htmlFor="weeklyHours">Weekly hours</label>
+            <label className="inputField__label" htmlFor="weeklyHours">Weekly working hours</label>
             <div className="inputField__inputWrapper">
               <input
                 className="inputField__input"
@@ -46,11 +46,11 @@ class Form extends React.Component {
                 required
                 pattern="^(0|[1-9][0-9]*)$"
               />
-              <Tooltip text="Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perferendis, velit!"/>
+              <Tooltip text="How many hours do you work per week? ⌛️"/>
             </div>
           </div>
           <div className="inputField has-tooltip">
-            <label className="inputField__label" htmlFor="holidays">Holidays per year</label>
+            <label className="inputField__label" htmlFor="holidays">Days off per year</label>
             <div className="inputField__inputWrapper">
               <input
                 className="inputField__input"
@@ -61,7 +61,7 @@ class Form extends React.Component {
                 onChange={this.handleChange}
                 pattern="^(0|[1-9][0-9]*)$"
               />
-              <Tooltip text="Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perferendis, velit!"/>
+              <Tooltip text="How many days off can you take each year? 🏄‍♂️"/>
             </div>
           </div>
           <div className="inputField has-tooltip">
@@ -76,7 +76,7 @@ class Form extends React.Component {
                 onChange={this.handleChange}
                 pattern="^(0|[1-9][0-9]*)$"
               />
-              <Tooltip text="Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perferendis, velit!"/>
+              <Tooltip text="How many bank holidays do you have? 🎊"/>
             </div>
           </div>
           <div className="inputField has-tooltip">
@@ -87,17 +87,17 @@ class Form extends React.Component {
                 id="itemCost"
                 placeholder="$$$.$$"
                 type="text"
-                defaultValue="0"
+                required
                 onChange={this.handleChange}
               />
-              <Tooltip text="Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perferendis, velit!"/>
+              <Tooltip text="How much does that stuff cost? 💰"/>
             </div>
           </div>
           <div className="submitField">
-            <button class="button" id="submit" type="submit">Tell me now!</button>
+            <button className="button" id="submit" type="submit">Tell me now! 🤔</button>
           </div>
         </form>
-      </div>
+      </main>
     )
   }
 }

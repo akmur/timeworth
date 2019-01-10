@@ -1,0 +1,9 @@
+.wrapper {
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-gap: 2em;
+
+  @media (min-width: 768px) {
+    grid-template-columns: 1fr 320px 1fr;
+  }
+}
