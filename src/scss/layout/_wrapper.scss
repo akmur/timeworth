@@ -1,9 +1,10 @@
 .wrapper {
   display: grid;
   grid-template-rows: 1fr;
-  grid-gap: 2em;
+  grid-gap: 1em;
 
-  @media (min-width: 768px) {
+  @media (min-width: $large) {
+    grid-gap: 2em;
     grid-template-columns: 1fr 320px 1fr;
   }
 }

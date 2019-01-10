@@ -1,9 +1,17 @@
 .resultSentence {
   text-align: center;
-  display: flex;
   flex-direction: column;
   justify-content: center;
   padding: 0 4em;
+  display: none;
+
+  @media (min-width: $large) {
+    display: flex;
+  }
+
+  .wrapper.has-result & {
+    display: flex;
+  }
 }
 
 .resultSentence__content {

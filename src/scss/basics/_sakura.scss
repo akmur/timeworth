@@ -13,11 +13,15 @@ body {
   align-items: center;
   background-color: get-color(greyscale, dark);
   color: get-color(greyscale, lightest);
-  display: flex;
+  display: block;
   font-size: 1.8rem;
   line-height: 1.618;
   margin: auto;
   min-height: 100vh;
+
+  @media (min-width: $large) {
+    display: flex;
+  }
 }
 
 @media (max-width: 684px) {
@@ -67,10 +71,14 @@ hr {
 
 a {
   text-decoration: none;
-  color: get-color(greyscale, lightest); }
-  a:hover {
-    color: #c9c9c9;
-    border-bottom: 2px solid #c9c9c9; }
+  color: get-color(greyscale, lightest);
+  border-bottom: 1px dotted get-color(greyscale, lightest);
+}
+
+a:hover {
+  color: get-color(ui, button);
+  border-bottom: 1px dotted get-color(ui, button);
+}
 
 ul {
   padding-left: 1.4em; }

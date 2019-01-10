@@ -39,8 +39,9 @@ class App extends React.Component {
   }
 
   render() {
+    const showResultClass = this.state.showResult ? 'wrapper has-result' : 'wrapper'
     return (
-      <section className="wrapper">
+      <section className={showResultClass}>
         <Header />
         <Form
           monthlyIncome={this.state.monthlyIncome}

@@ -1,0 +1,22 @@
+.footer {
+  font-size: 1em;
+  text-align: center;
+  margin-top: 2em;
+  margin-bottom: 1em;
+
+  @media (min-width: $large) {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+  }
+}
+
+.footer__small {
+  font-size: 0.75em;
+  display: block;
+
+  @media (min-width: $large) {
+    display: inline;
+  }
+}
