@@ -3,4 +3,9 @@
   flex-direction: column;
   justify-content: center;
   text-align: center;
+  margin-top: 1em;
+
+  @media (min-width: $large) {
+    margin-top: 0;
+  }
 }

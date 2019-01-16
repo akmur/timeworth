@@ -6,7 +6,7 @@ function retrieveData(key) {
       defaultValue = 40
       break
     case 'monthlyIncome':
-      defaultValue = 0
+      defaultValue = ''
       break
     case 'holidays':
       defaultValue = 20

@@ -2,6 +2,7 @@
   display: grid;
   grid-template-rows: 1fr;
   grid-gap: 1em;
+  margin-top: 1em;
 
   @media (min-width: $large) {
     grid-gap: 2em;

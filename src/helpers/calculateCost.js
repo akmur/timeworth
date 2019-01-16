@@ -5,11 +5,13 @@ export default function(
   monthlyIncome,
   itemCost
 ) {
-  // calculate
-  const actualMonthlyWorkedDays = (5 * 52 - bankHolidays - holidays) / 10
-  const hoursInAMonth = (weeklyHours / 7) * actualMonthlyWorkedDays
-  const minutesInAMonth = hoursInAMonth * 60
-  const realPayPerMinute = monthlyIncome / minutesInAMonth
+  const averageDaysInAMonth = 30.436
+  const workedDailyHours = (Math.floor(weeklyHours) / 7)
+  const workedMonthlyHours = workedDailyHours * averageDaysInAMonth
+  const monthlyHolidaysHours = ((bankHolidays + holidays) / 12) * workedDailyHours
+  const actualHoursInAMonth = workedMonthlyHours - monthlyHolidaysHours
+  const actualMinutesInAMonth = actualHoursInAMonth * 60
+  const realPayPerMinute = monthlyIncome / actualMinutesInAMonth
   const roundedPayPerMinute = realPayPerMinute.toFixed(3)
   const costinMinutes = Math.floor(itemCost / roundedPayPerMinute)
 
@@ -24,3 +26,5 @@ export default function(
     showResult
   }
 }
+
+

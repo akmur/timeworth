@@ -1,9 +1,9 @@
 .button {
   background-color: get-color(ui, button);
-  border: 1px solid get-color(greyscale, lightest);
+  border: 0.25em dashed get-color(ui, button);
   color: get-color(greyscale, lightest);
   font-size: 1.5em;
-  padding: 0.5em;
+  padding: 0.285em;
   width: 100%;
 
   &:hover,

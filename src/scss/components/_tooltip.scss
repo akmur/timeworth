@@ -3,10 +3,14 @@
 }
 
 .tooltip__icon {
-  display: flex;
+  display: none;
   position: relative;
   top: 1px;
   cursor: pointer;
+
+  @media (min-width: $large) {
+    display: flex;
+  }
 
   &:hover + .tooltip__text {
     display: block;
