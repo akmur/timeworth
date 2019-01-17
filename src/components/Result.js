@@ -12,27 +12,28 @@ class Result extends React.Component {
         <section className="resultSentence">
           <div className="resultSentence__content">
             <div>
-              To get that,<br />
+              To get that,
+              <br />
               you should work: <br />
             </div>
-            {
-              totalHours ? (
-                <div className="resultSentence__hours">
-                  { `${totalHours} ${hoursText}` }
-                </div>
-              ) : ('')
-            }
+            {totalHours ? (
+              <div className="resultSentence__hours">
+                {`${totalHours} ${hoursText}`}
+              </div>
+            ) : (
+              ''
+            )}
             <div className="resultSentence__minutes">
-              { totalHours ? ('and ') : ('') }
-              { `${totalMinutes} ${minutesText}` }
+              {totalHours ? 'and ' : ''}
+              {`${totalMinutes} ${minutesText}`}
             </div>
-            {
-              totalHours > 100 ? (
-                <div className="resultSentence__small">
-                  (Good luck with that. 👍)
-                </div>
-              ) : ('')
-            }
+            {totalHours > 100 ? (
+              <div className="resultSentence__small">
+                (Good luck with that. 👍)
+              </div>
+            ) : (
+              ''
+            )}
           </div>
         </section>
       )
@@ -40,7 +41,7 @@ class Result extends React.Component {
       return (
         <section className="resultSentence">
           <div className="resultSentence__content">
-            How long do I have to work to buy that?
+            How long do you have to work to buy that?
           </div>
         </section>
       )

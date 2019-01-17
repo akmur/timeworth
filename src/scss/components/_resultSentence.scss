@@ -1,9 +1,9 @@
 .resultSentence {
-  text-align: center;
+  display: none;
   flex-direction: column;
   justify-content: center;
   padding: 0 4em;
-  display: none;
+  text-align: center;
 
   @media (min-width: $large) {
     display: flex;
@@ -15,7 +15,11 @@
 }
 
 .resultSentence__content {
-  font-size: 2.5em;
+  font-size: 2em;
+
+  @media (min-width: $larger) {
+    font-size: 2.5em;
+  }
 }
 
 .resultSentence__hours {

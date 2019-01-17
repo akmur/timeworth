@@ -5,7 +5,11 @@ class Header extends React.Component {
     return (
       <header className="header">
         <div className="logo">Timeworth ⏳💰</div>
-        <div className="subtitle">How long do I have to work<br />to buy that?</div>
+        <div className="subtitle">
+          How long do you have to work
+          <br />
+          to buy that?
+        </div>
       </header>
     )
   }

@@ -7,16 +7,16 @@ $mini: 382px;
 $small: 500px;
 $medium: 768px;
 $large: 1024px;
+$larger: 1200px;
 
 // Colors
 
-$white: #ffffff;
-$black: #000000;
+$white: #fff;
+$black: #000;
 $mine-shaft: #303030;
 $tundora: #565454;
 $stack: #868686;
-$chrome-yellow: #FFAB00;
-
+$chrome-yellow: #ffab00;
 
 $colors: (
   greyscale: (
@@ -28,5 +28,5 @@ $colors: (
   ),
   ui: (
     button: $chrome-yellow
-  ),
+  )
 );
