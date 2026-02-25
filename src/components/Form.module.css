@@ -13,8 +13,10 @@
   }
 }
 
-.field {
-  margin-bottom: 1.5em;
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
 }
 
 .label {
@@ -43,7 +45,7 @@
 }
 
 .submitField {
-  margin-top: 2.5em;
+  margin-top: 0.5em;
 }
 
 .button {

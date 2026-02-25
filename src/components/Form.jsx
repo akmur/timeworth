@@ -1,7 +1,15 @@
 import Tooltip from './Tooltip'
 import styles from './Form.module.css'
 
-export default function Form({ monthlyIncome, holidays, bankHolidays, weeklyHours, handleChange, handleSubmit, showResult }) {
+export default function Form({
+  monthlyIncome,
+  holidays,
+  bankHolidays,
+  weeklyHours,
+  handleChange,
+  handleSubmit,
+  showResult
+}) {
   const onSubmit = (event) => {
     event.preventDefault()
     handleSubmit(event)
@@ -11,7 +19,7 @@ export default function Form({ monthlyIncome, holidays, bankHolidays, weeklyHour
 
   return (
     <main className={mainClass}>
-      <form onSubmit={onSubmit}>
+      <form onSubmit={onSubmit} className={styles.form}>
         <div className={styles.field}>
           <label className={styles.label} htmlFor="monthlyIncome">
             Monthly income
@@ -30,7 +38,9 @@ export default function Form({ monthlyIncome, holidays, bankHolidays, weeklyHour
           </div>
         </div>
         <div className={styles.field}>
-          <label className={styles.label} htmlFor="weeklyHours">Weekly working hours</label>
+          <label className={styles.label} htmlFor="weeklyHours">
+            Weekly working hours
+          </label>
           <div className={styles.inputWrapper}>
             <input
               className={styles.input}
@@ -46,7 +56,9 @@ export default function Form({ monthlyIncome, holidays, bankHolidays, weeklyHour
           </div>
         </div>
         <div className={styles.field}>
-          <label className={styles.label} htmlFor="holidays">Days off per year</label>
+          <label className={styles.label} htmlFor="holidays">
+            Days off per year
+          </label>
           <div className={styles.inputWrapper}>
             <input
               className={styles.input}
@@ -61,7 +73,9 @@ export default function Form({ monthlyIncome, holidays, bankHolidays, weeklyHour
           </div>
         </div>
         <div className={styles.field}>
-          <label className={styles.label} htmlFor="bankHolidays">Bank holidays per year</label>
+          <label className={styles.label} htmlFor="bankHolidays">
+            Bank holidays per year
+          </label>
           <div className={styles.inputWrapper}>
             <input
               className={styles.input}
@@ -76,7 +90,9 @@ export default function Form({ monthlyIncome, holidays, bankHolidays, weeklyHour
           </div>
         </div>
         <div className={styles.field}>
-          <label className={styles.label} htmlFor="itemCost">Cost of the stuff</label>
+          <label className={styles.label} htmlFor="itemCost">
+            Cost of the stuff
+          </label>
           <div className={styles.inputWrapper}>
             <input
               className={styles.input}
@@ -90,7 +106,9 @@ export default function Form({ monthlyIncome, holidays, bankHolidays, weeklyHour
           </div>
         </div>
         <div className={styles.submitField}>
-          <button className={styles.button} id="submit" type="submit">Tell me now! 🤔</button>
+          <button className={styles.button} id="submit" type="submit">
+            Tell me now! 🤔
+          </button>
         </div>
       </form>
     </main>

@@ -212,7 +212,12 @@ body {
   }
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   line-height: 1.1;
   font-family: var(--font-sans);
   font-weight: 700;
@@ -222,14 +227,28 @@ h1, h2, h3, h4, h5, h6 {
   hyphens: auto;
 }
 
-h1 { font-size: 2.35em; }
-h2 { font-size: 2.00em; }
-h3 { font-size: 1.75em; }
-h4 { font-size: 1.5em; }
-h5 { font-size: 1.25em; }
-h6 { font-size: 1em; }
+h1 {
+  font-size: 2.35em;
+}
+h2 {
+  font-size: 2em;
+}
+h3 {
+  font-size: 1.75em;
+}
+h4 {
+  font-size: 1.5em;
+}
+h5 {
+  font-size: 1.25em;
+}
+h6 {
+  font-size: 1em;
+}
 
-small, sub, sup {
+small,
+sub,
+sup {
   font-size: 75%;
 }
 
@@ -261,9 +280,9 @@ img {
 }
 
 button,
-input[type="submit"],
-input[type="reset"],
-input[type="button"] {
+input[type='submit'],
+input[type='reset'],
+input[type='button'] {
   display: inline-block;
   padding: 5px 10px;
   text-align: center;
@@ -278,9 +297,9 @@ input[type="button"] {
 }
 
 button[disabled],
-input[type="submit"][disabled],
-input[type="reset"][disabled],
-input[type="button"][disabled] {
+input[type='submit'][disabled],
+input[type='reset'][disabled],
+input[type='button'][disabled] {
   cursor: default;
   opacity: 0.5;
 }
@@ -308,8 +327,7 @@ input[type]:focus {
 .footer {
   font-size: 1em;
   text-align: center;
-  margin-top: 2em;
-  margin-bottom: 1em;
+  margin-top: 1em;
 }
 
 @media (min-width: 1024px) {
