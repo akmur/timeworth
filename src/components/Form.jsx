@@ -22,7 +22,7 @@ export default function Form({
       <form onSubmit={onSubmit} className={styles.form}>
         <div className={styles.field}>
           <label className={styles.label} htmlFor="monthlyIncome">
-            Monthly income
+            Monthly net income
           </label>
           <div className={styles.inputWrapper}>
             <input
