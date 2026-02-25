@@ -1,0 +1,50 @@
+.wrapper {
+  position: absolute;
+  right: 0.5em;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.icon {
+  display: none;
+  position: relative;
+  top: 1px;
+  cursor: pointer;
+}
+
+@media (min-width: 1024px) {
+  .icon {
+    display: flex;
+  }
+}
+
+.icon:hover + .text {
+  display: block;
+}
+
+.text {
+  display: none;
+  width: 200px;
+  position: absolute;
+  left: 50px;
+  top: 0;
+  background: var(--color-tundora);
+  border: 1px solid var(--color-white);
+  color: var(--color-white);
+  padding: 0.5em;
+  transform: translateY(-40%);
+  z-index: 10;
+}
+
+.text::before {
+  content: '';
+  position: absolute;
+  left: -0.55em;
+  top: 50%;
+  margin-top: -0.75rem;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 1rem 1rem 1rem 0;
+  border-color: transparent var(--color-white) transparent transparent;
+}

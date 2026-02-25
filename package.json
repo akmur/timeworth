@@ -1,25 +1,19 @@
 {
-  "name": "git-blog",
-  "version": "1.0.0",
-  "description": "Git Powered Preact Blog",
-  "main": "index.html",
+  "name": "timeworth",
+  "version": "2.0.0",
+  "description": "How long do you have to work to buy that?",
+  "type": "module",
   "scripts": {
-    "dev": "parcel index.html --open",
-    "clean": "rimraf ./dist/*.map ./dist/*.js ./dist/*.html ./dist/*.css ./dist/*.webmanifest",
-    "build": "npm run clean && parcel build index.html"
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
   },
   "dependencies": {
-    "react": "^16.7.0",
-    "react-dom": "^16.7.0"
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
   },
   "devDependencies": {
-    "@babel/core": "^7.2.2",
-    "@babel/plugin-proposal-class-properties": "^7.2.3",
-    "node-sass": "^4.9.3",
-    "nodemon": "^1.18.4",
-    "parcel-bundler": "^1.11.0",
-    "parcel-plugin-sw-precache": "^1.0.3",
-    "rimraf": "^2.6.2"
-  },
-  "keywords": []
+    "@vitejs/plugin-react": "^4.3.0",
+    "vite": "^6.1.0"
+  }
 }

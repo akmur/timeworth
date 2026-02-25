@@ -1,0 +1,29 @@
+.header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  margin-top: 1em;
+}
+
+@media (min-width: 1024px) {
+  .header {
+    margin-top: 0;
+  }
+}
+
+.logo {
+  font-size: 3em;
+  font-weight: 900;
+  color: var(--color-white);
+}
+
+.subtitle {
+  font-size: 1.25em;
+}
+
+@media (min-width: 1024px) {
+  .subtitle {
+    display: none;
+  }
+}

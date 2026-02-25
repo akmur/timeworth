@@ -1,34 +1,38 @@
-.resultSentence {
+.result {
   display: none;
   flex-direction: column;
   justify-content: center;
   padding: 0 4em;
   text-align: center;
+}
 
-  @media (min-width: $large) {
-    display: flex;
-  }
-
-  .wrapper.has-result & {
+@media (min-width: 1024px) {
+  .result {
     display: flex;
   }
 }
 
-.resultSentence__content {
-  font-size: 2em;
+.visible {
+  display: flex;
+}
 
-  @media (min-width: $larger) {
+.content {
+  font-size: 2em;
+}
+
+@media (min-width: 1200px) {
+  .content {
     font-size: 2.5em;
   }
 }
 
-.resultSentence__hours {
+.hours {
   font-size: 2em;
   font-weight: 700;
   line-height: 1.25;
 }
 
-.resultSentence__small {
+.small {
   font-size: 0.5em;
   margin-top: 1.5em;
 }

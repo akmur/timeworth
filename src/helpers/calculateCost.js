@@ -5,25 +5,28 @@ export default function(
   monthlyIncome,
   itemCost
 ) {
-  const averageDaysInAMonth = 30.436
-  const workedDailyHours = (Math.floor(weeklyHours) / 7)
-  const workedMonthlyHours = workedDailyHours * averageDaysInAMonth
-  const monthlyHolidaysHours = ((bankHolidays + holidays) / 12) * workedDailyHours
-  const actualHoursInAMonth = workedMonthlyHours - monthlyHolidaysHours
-  const actualMinutesInAMonth = actualHoursInAMonth * 60
-  const realPayPerMinute = monthlyIncome / actualMinutesInAMonth
-  const roundedPayPerMinute = realPayPerMinute.toFixed(3)
-  const costinMinutes = Math.floor(itemCost / roundedPayPerMinute)
+  const hours = Number(weeklyHours) || 0
+  const income = Number(monthlyIncome) || 0
+  const cost = Number(itemCost) || 0
+  const totalDaysOff = (Number(holidays) || 0) + (Number(bankHolidays) || 0)
 
-  const totalHours = Math.floor(costinMinutes / 60)
-  const totalMinutes = costinMinutes % 60
+  if (hours <= 0 || income <= 0 || cost <= 0) {
+    return { totalHours: 0, totalMinutes: 0, showResult: false }
+  }
 
-  const showResult = costinMinutes ? true : false
+  const dailyHours = hours / 5
+  const annualWorkedHours = (52 * hours) - (totalDaysOff * dailyHours)
+  const monthlyWorkedMinutes = (annualWorkedHours / 12) * 60
+  const payPerMinute = income / monthlyWorkedMinutes
+  const costInMinutes = Math.floor(cost / payPerMinute)
+
+  const totalHours = Math.floor(costInMinutes / 60)
+  const totalMinutes = costInMinutes % 60
 
   return {
     totalHours,
     totalMinutes,
-    showResult
+    showResult: costInMinutes > 0
   }
 }
 

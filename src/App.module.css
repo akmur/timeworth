@@ -3,8 +3,10 @@
   grid-template-rows: 1fr;
   grid-gap: 1em;
   margin-top: 1em;
+}
 
-  @media (min-width: $large) {
+@media (min-width: 1024px) {
+  .wrapper {
     grid-gap: 2em;
     grid-template-columns: 1fr 320px 1fr;
   }
